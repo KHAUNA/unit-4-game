@@ -1,0 +1,9 @@
+/* css */
+img {
+    height:100px;
+    width:auto;
+    padding-left:50px;
+}
+body {
+    background-image: url(../images/full-bloom.png);
+}
