@@ -1,30 +1,29 @@
 var crystalArr = [10,3,5,7];
 var counter = 0;
-var wins = 0;
-var losses = 0;
 
-function shuffleArr() {
-
-        var currIndex = crystalArr.length
-        var randIndex;
-        var tempValue;
-
-    while (0 != currIndex) {
-        randIndex = Math.floor(Math.random() * currIndex)
-        currIndex = currIndex - 1;
-
-        tempValue = crystalArr[currIndex];
-        crystalArr[currIndex] = crystalArr[randIndex];
-        crystalArr[randIndex] = tempValue;
-    }   
-    return crystalArr;
-}   
+// function winChecker() {
+//     var targetScore = 53;
+//     if (counter == targetScore) {
+//         alert("Nice job, you win")
+//     } else if (counter > targetScore) {
+//         alert("Sorry...you lose")
+//     }
+// };
 
 $( document ).ready(function() {
+// shuffleArr(); come back to shuffle function
 
-    window.onclick = function() {
-        winChecker();
-    };
+// function shuffleArr() {
+
+//     for (i=3; i >= 0; i--) {
+//         var currIndex = crystalArr[i];
+//         var randIndex = Math.floor(Math.random()*(i+1))
+
+//         crystalArr[randIndex] = crystalArr
+//         crystalArr[i] = randIndex;
+        
+//     } console.log(crystalArr)
+// }
 
 function assignCrystalValue () {
     $("#bCrystal").attr("b-crystal-value",crystalArr[0]);
@@ -45,37 +44,19 @@ assignCrystalValue();
 $("#bCrystal").on("click", function score() {
     counter = counter + parseInt(crystalValueArr[0])
     $("#totalScoreH1").text(counter )
-});
+})
 $("#yCrystal").on("click", function score() {
     counter = counter + parseInt(crystalValueArr[1])
     $("#totalScoreH1").text(counter )
-});
+})
 $("#pCrystal").on("click", function score() {
     counter = counter + parseInt(crystalValueArr[2])
     $("#totalScoreH1").text(counter )
-});
+})
 $("#rCrystal").on("click", function score() {
     counter = counter + parseInt(crystalValueArr[3])
     $("#totalScoreH1").text(counter)
-});
+})
 
-function winChecker() {
-    var targetScore = 53;
-    if (counter == targetScore) {
-        alert("WINNER!");
-        counter = 0;
-        wins ++;
-        shuffleArr();   
-        $("#winCount").text(wins);
-        assignCrystalValue();
-    } else if (counter > targetScore) {
-        alert("Sorry...you lose");
-        counter = 0;
-        losses ++;
-        shuffleArr();
-        $("#loseCount").text(losses);
-        assignCrystalValue();
-    }
-};
 
 });

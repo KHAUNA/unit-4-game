@@ -3,49 +3,58 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../Crystal-Guess-Game/assets/css/style.css">
+    <link rel="stylesheet" href="../unit-4-game/assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
     <title>Crystal Guess Game</title>
 <body>
-    <header>
-        <h1>Crystal Collector!</h1>
-    </header>
-    <div>
-        <p>You will be given a random number at the start of the game 
-           There are four crystals below.  By clicking on a crystal you
-           will add a specific amount of points to your total score.</p>
-        <br>
-        <p>You win the game by matching your total score to random
-            number, you lose the game if your total score goes above
-            the random number.</p>
-        <br>
-        <p>The value of each crystal is hidden from you until you clicking
-            on it.</p>
-        <br>
-        <p>Each time when the game starts, the game will change the values
-            of each crystal...good luck!</p>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
-    <div id="targetscorediv">
+    <div id="topBox">
+        <header>
+            <h1>Crystal Collector!</h1>
+        </header>
+        <div id="words">
+            <p>You will be given a random number at the start of the game 
+            There are four crystals below.  By clicking on a crystal you
+            will add a specific amount of points to your total score.</p>
 
-    </div>
-    <div id="winLoseDiv">
+            <p>You win the game by matching your total score to random
+                number, you lose the game if your total score goes above
+                the random number.</p>
 
+            <p>The value of each crystal is hidden from you until you clicking
+                on it.</p>
+
+            <p>Each time when the game starts, the game will change the values
+                of each crystal...good luck!</p>
+
+            <br>
+        </div>
+    </div>
+    <div id="score-winlose">
+        <div id="targetScoreDiv">
+            <h1 id="target53">53</h1>
+        </div>
+        <div id="winLoseDiv">
+            <h5>Wins :<span id="winCount"></span></h5>
+            <h5>Losses :<span id="loseCount"></span></h5>
+        </div>
     </div>
     <div id="crystalImgs">
-        <img src="assets/images/bluezeldacrystal.png">
-        <img src="assets/images/yellowzeldacrystal.jpg">
-        <img src="assets/images/zeldapurplecrystal.png">
-        <img src="assets/images/zeldaredrupee.png">
-    </div>
-    <div>
-        <p>Your total score is:</p>
+        <img id="bCrystal" src="assets/images/bluezeldacrystal.png">
+        <img id="yCrystal" src="assets/images/yellowzeldacrystal.jpg">
+        <img id="pCrystal" src="assets/images/zeldapurplecrystal.png">
+        <img id="rCrystal" src="assets/images/zeldaredrupee.png">
     </div>
     <div id="totalScoreDiv">
-
+        <h3>Your total score is:</h3>
+    <div>
+        <h1 id="totalScoreH1"></h1>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
+<!-- 10-3-5-7 num options with target of 53 -->
 </head>
 </html>
